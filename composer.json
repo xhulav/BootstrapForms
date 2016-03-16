@@ -1,0 +1,19 @@
+{
+  "name": "xhulav/bootstrap-forms",
+  "description": "Bootstrap forms support for Nette Framework.",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladimir Hula",
+      "email": "xhulav@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "nette/forms": "v2.3.4"
+  },
+  "autoload": {
+    "psr-0": {"xhulav": "src/"}
+  }
+}

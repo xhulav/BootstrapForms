@@ -1,0 +1,9 @@
+.btn-separated {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-separated:first-child {
+  margin-top: 0px;
+}
