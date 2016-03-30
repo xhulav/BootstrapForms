@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=5.4",
-    "nette/forms": "v2.3.4"
+    "nette/forms": "~2.3.4"
   },
   "autoload": {
     "psr-0": {"xhulav\\BootstrapForms\\": "src/"}

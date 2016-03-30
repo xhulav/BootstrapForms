@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "80bf212b885d5d6937dbd9d734535437",
-    "content-hash": "28f976e6535e5e6aeb585d506d53c3ba",
+    "hash": "d5e847c255db57bd9ca57809ece2b88d",
+    "content-hash": "20ddcc81339f8ec513b13f037ce7ee93",
     "packages": [
         {
             "name": "nette/component-model",
@@ -65,16 +65,16 @@
         },
         {
             "name": "nette/forms",
-            "version": "v2.3.4",
+            "version": "v2.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/forms.git",
-                "reference": "e4e3777c7a783f1877eda4a07ff2f128bdd05bf9"
+                "reference": "addaa4472816eee3645550458518c00a4234acd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/forms/zipball/e4e3777c7a783f1877eda4a07ff2f128bdd05bf9",
-                "reference": "e4e3777c7a783f1877eda4a07ff2f128bdd05bf9",
+                "url": "https://api.github.com/repos/nette/forms/zipball/addaa4472816eee3645550458518c00a4234acd2",
+                "reference": "addaa4472816eee3645550458518c00a4234acd2",
                 "shasum": ""
             },
             "require": {
@@ -107,16 +107,16 @@
             "authors": [
                 {
                     "name": "David Grudl",
-                    "homepage": "http://davidgrudl.com"
+                    "homepage": "https://davidgrudl.com"
                 },
                 {
                     "name": "Nette Community",
-                    "homepage": "http://nette.org/contributors"
+                    "homepage": "https://nette.org/contributors"
                 }
             ],
             "description": "Nette Forms: greatly facilitates web forms",
-            "homepage": "http://nette.org",
-            "time": "2015-07-20 01:25:35"
+            "homepage": "https://nette.org",
+            "time": "2016-03-30 08:44:53"
         },
         {
             "name": "nette/http",
@@ -124,12 +124,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/http.git",
-                "reference": "00f1a50e6740526e5163d0b49b518cfa066d2798"
+                "reference": "c3a9a202545003b05fcf757dc64d8f2548e78cb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/http/zipball/00f1a50e6740526e5163d0b49b518cfa066d2798",
-                "reference": "00f1a50e6740526e5163d0b49b518cfa066d2798",
+                "url": "https://api.github.com/repos/nette/http/zipball/c3a9a202545003b05fcf757dc64d8f2548e78cb1",
+                "reference": "c3a9a202545003b05fcf757dc64d8f2548e78cb1",
                 "shasum": ""
             },
             "require": {
@@ -176,7 +176,7 @@
             ],
             "description": "Nette HTTP Component",
             "homepage": "https://nette.org",
-            "time": "2016-03-15 19:56:25"
+            "time": "2016-03-29 14:11:17"
         },
         {
             "name": "nette/utils",
@@ -184,12 +184,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "c48c70935daf671a0de24bfb9081c79cdad50628"
+                "reference": "e8749e5417bf22b0bd999d4b49ee799a5bad5fb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/c48c70935daf671a0de24bfb9081c79cdad50628",
-                "reference": "c48c70935daf671a0de24bfb9081c79cdad50628",
+                "url": "https://api.github.com/repos/nette/utils/zipball/e8749e5417bf22b0bd999d4b49ee799a5bad5fb9",
+                "reference": "e8749e5417bf22b0bd999d4b49ee799a5bad5fb9",
                 "shasum": ""
             },
             "require": {
@@ -237,7 +237,7 @@
             ],
             "description": "Nette Utility Classes",
             "homepage": "https://nette.org",
-            "time": "2016-03-15 19:56:25"
+            "time": "2016-03-18 12:31:51"
         }
     ],
     "packages-dev": [],
