@@ -12,9 +12,9 @@ class BootstrapSubmitButton extends SubmitButton implements IButton {
 	use TButton, TIconButton;
 
 	public function __construct($caption = NULL) {
-		parent::__construct(null);
+		parent::__construct($caption);
 		
-		$this->getControlPrototype()->setName('button')->setText($caption);
+		$this->getControlPrototype()->setName('button')->setText($this->translate($caption === NULL ? $this->caption : $caption));
 	}
 
 }
