@@ -11,7 +11,7 @@ use xhulav\BootstrapForms\Controls\PlainText;
 
 trait BootstrapControls
 {
-    protected $inputSize = BootstrapForm::INPUT_MD;
+    protected $inputSize = IBootstrapForm::INPUT_MD;
 
 
     /**
@@ -114,7 +114,7 @@ trait BootstrapControls
      */
     public function addUpload($name, $label = NULL, $multiple = FALSE) {
         parent::addUpload($name, null, $multiple)->getControlPrototype()->class[] = 'hidden attached-to-button';
-        return $this->addIconButton($name . 'Btn', $label)->setButtonType(BootstrapForm::BTN_DISPLAY_SEPARATED)->addClass('btn-uploader')->setOmitted(TRUE);
+        return $this->addIconButton($name . 'Btn', $label)->setButtonType(IBootstrapForm::BTN_DISPLAY_SEPARATED)->addClass('btn-uploader')->setOmitted(TRUE);
     }
 
     /**
@@ -124,7 +124,7 @@ trait BootstrapControls
      */
     public function addMultiUpload($name, $label = NULL) {
         parent::addMultiUpload($name, null)->getControlPrototype()->class[] = 'hidden attached-to-button';
-        return $this->addIconButton($name . 'Btn', $label)->setButtonType(BootstrapForm::BTN_DISPLAY_SEPARATED)->addClass('btn-uploader')->setOmitted(TRUE);
+        return $this->addIconButton($name . 'Btn', $label)->setButtonType(IBootstrapForm::BTN_DISPLAY_SEPARATED)->addClass('btn-uploader')->setOmitted(TRUE);
     }
 
     /**

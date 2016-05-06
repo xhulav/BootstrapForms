@@ -15,7 +15,7 @@ use Nette\Forms\Form;
 use Nette\Forms\Rendering\DefaultFormRenderer;
 use Nette\InvalidArgumentException;
 
-use xhulav\BootstrapForms\BootstrapForm;
+use xhulav\BootstrapForms\IBootstrapForm;
 use xhulav\BootstrapForms\IButton;
 use xhulav\BootstrapForms\ITextBasedControl;
 
@@ -66,10 +66,10 @@ class BootstrapFormRenderer extends DefaultFormRenderer
                 $control->getHtmlId(); // initialization of button ID
 
                 switch ($control->getButtonDisplay()) {
-                    case BootstrapForm::BTN_DISPLAY_BLOCK:
+                    case IBootstrapForm::BTN_DISPLAY_BLOCK:
                         $control->addClass('btn-block');
                         break;
-                    case BootstrapForm::BTN_DISPLAY_SEPARATED:
+                    case IBootstrapForm::BTN_DISPLAY_SEPARATED:
                         $control->addClass('btn-separated');
                         break;
                 }

@@ -2,10 +2,7 @@
 
 namespace xhulav\BootstrapForms;
 
-use Nette\Forms\Form;
-use xhulav\BootstrapForms\Rendering\BootstrapFormRenderer;
-
-class BootstrapForm extends Form
+interface IBootstrapForm
 {
 	// input sizes
 	const INPUT_SM = 'sm';
@@ -26,14 +23,4 @@ class BootstrapForm extends Form
 	const BTN_TYPE_INFO = 'btn-info';
 	const BTN_TYPE_WARNING = 'btn-warning';
 	const BTN_TYPE_DANGER = 'btn-danger';
-
-	public function __construct($name = NULL)
-	{
-		parent::__construct($name);
-
-		$this->setRenderer(new BootstrapFormRenderer());
-	}
-
-	use BootstrapControls;
-
 }

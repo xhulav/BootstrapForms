@@ -1,9 +1,10 @@
 <?php
 
 include_once('../vendor/autoload.php');
+include_once('BootstrapForm.php');
 
 use Nette\Forms\Form;
-use xhulav\BootstrapForms\BootstrapForm;
+use xhulav\BootstrapForms\IBootstrapForm;
 use xhulav\BootstrapForms\Rendering\BootstrapHorizontalFormRenderer;
 use xhulav\BootstrapForms\Rendering\BootstrapInlineFormRenderer;
 
@@ -25,61 +26,61 @@ $formDefault->addSubmit('submit', 'Submit');
 $formExtensions = new BootstrapForm();
 $formExtensions->setRenderer(new BootstrapHorizontalFormRenderer());
 $formExtensions->addPlainText('plaintext', 'Plain text', 'Lorem ipsum...');
-$formExtensions->addIconButton('iconbutton', 'Icon button')->setIcon('fa fa-plane')->setButtonDisplay(BootstrapForm::BTN_DISPLAY_SEPARATED);
+$formExtensions->addIconButton('iconbutton', 'Icon button')->setIcon('fa fa-plane')->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_SEPARATED);
 
 $formBase = new BootstrapForm();
 $formBase->addText('username', 'Username')->addRule(Form::FILLED, 'Please enter your username.');
 $formBase->addPassword('password', 'Password')->setIconSuffix('fa fa-lock')->addRule(Form::FILLED, 'Please enter your password.');
-$formBase->addSubmit('submit', 'Login')->setButtonType(BootstrapForm::BTN_TYPE_PRIMARY);
+$formBase->addSubmit('submit', 'Login')->setButtonType(IBootstrapForm::BTN_TYPE_PRIMARY);
 
 $formHorizontal = new BootstrapForm();
 $formHorizontal->setRenderer(new BootstrapHorizontalFormRenderer());
 $formHorizontal->addText('username', 'Username')->addRule(Form::FILLED, 'Please enter your username.');
 $formHorizontal->addPassword('password', 'Password')->setIconSuffix('fa fa-lock')->addRule(Form::FILLED, 'Please enter your password.');
-$formHorizontal->addSubmit('submit', 'Login')->setButtonType(BootstrapForm::BTN_TYPE_PRIMARY);
+$formHorizontal->addSubmit('submit', 'Login')->setButtonType(IBootstrapForm::BTN_TYPE_PRIMARY);
 
 $formInline = new BootstrapForm();
 $formInline->setRenderer(new BootstrapInlineFormRenderer());
 $formInline->addText('username', 'Username')->addRule(Form::FILLED, 'Please enter your username.');
 $formInline->addPassword('password', 'Password')->setIconSuffix('fa fa-lock')->addRule(Form::FILLED, 'Please enter your password.');
-$formInline->addSubmit('submit', 'Login')->setButtonType(BootstrapForm::BTN_TYPE_PRIMARY);
+$formInline->addSubmit('submit', 'Login')->setButtonType(IBootstrapForm::BTN_TYPE_PRIMARY);
 
 $formButtons = new BootstrapForm();
 $formButtons->setRenderer(new BootstrapHorizontalFormRenderer());
-$formButtons->addButton('btncolor1', 'Button danger')->setButtonType(BootstrapForm::BTN_TYPE_DANGER);
-$formButtons->addButton('btncolor2', 'Button default')->setButtonType(BootstrapForm::BTN_TYPE_DEFAULT);
-$formButtons->addButton('btncolor3', 'Button info')->setButtonType(BootstrapForm::BTN_TYPE_INFO);
-$formButtons->addButton('btncolor4', 'Button primary')->setButtonType(BootstrapForm::BTN_TYPE_PRIMARY);
-$formButtons->addButton('btncolor5', 'Button success')->setButtonType(BootstrapForm::BTN_TYPE_SUCCESS);
-$formButtons->addButton('btncolor6', 'Button warning')->setButtonType(BootstrapForm::BTN_TYPE_WARNING);
-$formButtons->addButton('btninline1', 'Inline button')->setButtonDisplay(BootstrapForm::BTN_DISPLAY_INLINE);
-$formButtons->addButton('btninline2', 'Inline button')->setButtonDisplay(BootstrapForm::BTN_DISPLAY_INLINE);
-$formButtons->addButton('btn1', 'Default button XS')->setButtonSize(BootstrapForm::BTN_SIZE_XS);
-$formButtons->addButton('btn2', 'Default button SM')->setButtonSize(BootstrapForm::BTN_SIZE_SM);
+$formButtons->addButton('btncolor1', 'Button danger')->setButtonType(IBootstrapForm::BTN_TYPE_DANGER);
+$formButtons->addButton('btncolor2', 'Button default')->setButtonType(IBootstrapForm::BTN_TYPE_DEFAULT);
+$formButtons->addButton('btncolor3', 'Button info')->setButtonType(IBootstrapForm::BTN_TYPE_INFO);
+$formButtons->addButton('btncolor4', 'Button primary')->setButtonType(IBootstrapForm::BTN_TYPE_PRIMARY);
+$formButtons->addButton('btncolor5', 'Button success')->setButtonType(IBootstrapForm::BTN_TYPE_SUCCESS);
+$formButtons->addButton('btncolor6', 'Button warning')->setButtonType(IBootstrapForm::BTN_TYPE_WARNING);
+$formButtons->addButton('btninline1', 'Inline button')->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_INLINE);
+$formButtons->addButton('btninline2', 'Inline button')->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_INLINE);
+$formButtons->addButton('btn1', 'Default button XS')->setButtonSize(IBootstrapForm::BTN_SIZE_XS);
+$formButtons->addButton('btn2', 'Default button SM')->setButtonSize(IBootstrapForm::BTN_SIZE_SM);
 $formButtons->addButton('btn3', 'Default button');
-$formButtons->addButton('btn4', 'Default button LG')->setButtonSize(BootstrapForm::BTN_SIZE_LG);
-$formButtons->addButton('btnblock1', 'Default block button XS')->setButtonSize(BootstrapForm::BTN_SIZE_XS)->setButtonDisplay(BootstrapForm::BTN_DISPLAY_BLOCK);
-$formButtons->addButton('btnblock2', 'Default block button SM')->setButtonSize(BootstrapForm::BTN_SIZE_SM)->setButtonDisplay(BootstrapForm::BTN_DISPLAY_BLOCK);
-$formButtons->addButton('btnblock3', 'Default block button')->setButtonDisplay(BootstrapForm::BTN_DISPLAY_BLOCK);
-$formButtons->addButton('btnblock4', 'Default block button LG')->setButtonSize(BootstrapForm::BTN_SIZE_LG)->setButtonDisplay(BootstrapForm::BTN_DISPLAY_BLOCK);
-$formButtons->addIconButton('btnicon1', 'Glyphicon')->setGlyphicon('wrench')->setButtonSize(BootstrapForm::BTN_SIZE_LG)->setButtonDisplay(BootstrapForm::BTN_DISPLAY_BLOCK);
-$formButtons->addIconButton('btnicon2', 'Font Awesome')->setIcon('fa fa-gear')->setButtonSize(BootstrapForm::BTN_SIZE_LG)->setButtonDisplay(BootstrapForm::BTN_DISPLAY_BLOCK);
+$formButtons->addButton('btn4', 'Default button LG')->setButtonSize(IBootstrapForm::BTN_SIZE_LG);
+$formButtons->addButton('btnblock1', 'Default block button XS')->setButtonSize(IBootstrapForm::BTN_SIZE_XS)->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_BLOCK);
+$formButtons->addButton('btnblock2', 'Default block button SM')->setButtonSize(IBootstrapForm::BTN_SIZE_SM)->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_BLOCK);
+$formButtons->addButton('btnblock3', 'Default block button')->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_BLOCK);
+$formButtons->addButton('btnblock4', 'Default block button LG')->setButtonSize(IBootstrapForm::BTN_SIZE_LG)->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_BLOCK);
+$formButtons->addIconButton('btnicon1', 'Glyphicon')->setGlyphicon('wrench')->setButtonSize(IBootstrapForm::BTN_SIZE_LG)->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_BLOCK);
+$formButtons->addIconButton('btnicon2', 'Font Awesome')->setIcon('fa fa-gear')->setButtonSize(IBootstrapForm::BTN_SIZE_LG)->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_BLOCK);
 
 $formInputs = new BootstrapForm();
 $formInputs->setRenderer(new BootstrapHorizontalFormRenderer());
-$formInputs->addText('input1', 'Small input')->setInputSize(BootstrapForm::INPUT_SM);
-$formInputs->addText('input2', 'Default input')->setInputSize(BootstrapForm::INPUT_MD);
-$formInputs->addText('input3', 'Large input')->setInputSize(BootstrapForm::INPUT_LG);
+$formInputs->addText('input1', 'Small input')->setInputSize(IBootstrapForm::INPUT_SM);
+$formInputs->addText('input2', 'Default input')->setInputSize(IBootstrapForm::INPUT_MD);
+$formInputs->addText('input3', 'Large input')->setInputSize(IBootstrapForm::INPUT_LG);
 $formInputs->addText('input4')->setPrefix('prefix')->setSuffix('suffix');
 $formInputs->addText('input5')->setIconPrefix('fa fa-plane')->setGlypiconSuffix('wrench');
-$formInputs->addPassword('inputpass1', 'Small password input')->setInputSize(BootstrapForm::INPUT_SM);
-$formInputs->addPassword('inputpass2', 'Default password input')->setInputSize(BootstrapForm::INPUT_MD);
-$formInputs->addPassword('inputpass3', 'Large password input')->setInputSize(BootstrapForm::INPUT_LG);
+$formInputs->addPassword('inputpass1', 'Small password input')->setInputSize(IBootstrapForm::INPUT_SM);
+$formInputs->addPassword('inputpass2', 'Default password input')->setInputSize(IBootstrapForm::INPUT_MD);
+$formInputs->addPassword('inputpass3', 'Large password input')->setInputSize(IBootstrapForm::INPUT_LG);
 $formInputs->addPassword('inputpass4')->setPrefix('prefix')->setSuffix('suffix');
 $formInputs->addPassword('inputpass5')->setIconPrefix('fa fa-plane')->setGlypiconSuffix('wrench');
-$formInputs->addSelect('select1', 'Select', array('One', 'Two', 'Three'))->setInputSize(BootstrapForm::INPUT_SM);
-$formInputs->addSelect('select2', 'Select', array('One', 'Two', 'Three'))->setInputSize(BootstrapForm::INPUT_MD);
-$formInputs->addSelect('select3', 'Select', array('One', 'Two', 'Three'))->setInputSize(BootstrapForm::INPUT_LG);
+$formInputs->addSelect('select1', 'Select', array('One', 'Two', 'Three'))->setInputSize(IBootstrapForm::INPUT_SM);
+$formInputs->addSelect('select2', 'Select', array('One', 'Two', 'Three'))->setInputSize(IBootstrapForm::INPUT_MD);
+$formInputs->addSelect('select3', 'Select', array('One', 'Two', 'Three'))->setInputSize(IBootstrapForm::INPUT_LG);
 $formInputs->addSelect('select4', 'Select', array('One', 'Two', 'Three'))->setPrefix('prefix')->setSuffix('suffix');
 $formInputs->addSelect('select5', 'Select', array('One', 'Two', 'Three'))->setIconPrefix('fa fa-plane')->setGlypiconSuffix('wrench');
 

@@ -5,8 +5,8 @@ namespace xhulav\BootstrapForms;
 trait TButton
 {
     protected $size;
-    protected $type = BootstrapForm::BTN_TYPE_DEFAULT;
-    protected $display = BootstrapForm::BTN_DISPLAY_SEPARATED;
+    protected $type = IBootstrapForm::BTN_TYPE_DEFAULT;
+    protected $display = IBootstrapForm::BTN_DISPLAY_SEPARATED;
 
     public function addClass($class)
     {

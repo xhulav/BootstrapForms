@@ -109,10 +109,10 @@ trait TTextBasedInput
             $groupAddon = Html::el('div');
             $groupAddon->class[] = 'input-group';
             switch ($this->getInputSize()) {
-                case BootstrapForm::INPUT_SM:
+                case IBootstrapForm::INPUT_SM:
                     $groupAddon->class[] = 'input-group-sm';
                     break;
-                case BootstrapForm::INPUT_LG:
+                case IBootstrapForm::INPUT_LG:
                     $groupAddon->class[] = 'input-group-lg';
                     break;
             }
@@ -139,10 +139,10 @@ trait TTextBasedInput
 
         } else {
             switch ($this->getInputSize()) {
-                case BootstrapForm::INPUT_SM:
+                case IBootstrapForm::INPUT_SM:
                     $this->getControlPrototype()->class[] = 'input-sm';
                     break;
-                case BootstrapForm::INPUT_LG:
+                case IBootstrapForm::INPUT_LG:
                     $this->getControlPrototype()->class[] = 'input-lg';
                     break;
             }
