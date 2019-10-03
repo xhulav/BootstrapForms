@@ -12,8 +12,6 @@ $formDefault = new BootstrapForm();
 $formDefault->addText('text', 'Text input');
 $formDefault->addPassword('password', 'Password input');
 $formDefault->addTextArea('textarea', 'Text area');
-$formDefault->addUpload('upload', 'Upload');
-$formDefault->addMultiUpload('multiupload', 'Multi upload');
 $formDefault->addHidden('hidden');
 $formDefault->addCheckbox('checkbox', 'Checkbox');
 $formDefault->addRadioList('radiolist', 'Radio list', array('One', 'Two', 'Three'));
@@ -27,6 +25,8 @@ $formExtensions = new BootstrapForm();
 $formExtensions->setRenderer(new BootstrapHorizontalFormRenderer());
 $formExtensions->addPlainText('plaintext', 'Plain text', 'Lorem ipsum...');
 $formExtensions->addIconButton('iconbutton', 'Icon button')->setIcon('fa fa-plane')->setButtonDisplay(IBootstrapForm::BTN_DISPLAY_SEPARATED);
+$formExtensions->addUploadButton('upload', 'Upload');
+$formExtensions->addMultiUploadButton('multiupload', 'Multi upload');
 
 $formBase = new BootstrapForm();
 $formBase->addText('username', 'Username')->addRule(Form::FILLED, 'Please enter your username.');

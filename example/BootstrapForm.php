@@ -8,12 +8,12 @@ use xhulav\BootstrapForms\Rendering\BootstrapFormRenderer;
 
 class BootstrapForm extends Form implements IBootstrapForm
 {
-    public function __construct($name = NULL)
-    {
-        parent::__construct($name);
+	public function __construct($name = NULL)
+	{
+		parent::__construct($name);
 
-        $this->setRenderer(new BootstrapFormRenderer());
-    }
+		$this->setRenderer(new BootstrapFormRenderer());
+	}
 
     use BootstrapControls;
 }

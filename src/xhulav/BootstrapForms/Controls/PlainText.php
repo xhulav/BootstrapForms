@@ -8,10 +8,10 @@ class PlainText extends BaseControl
 {
 
     /**
-     * @param null $label
+     * @param string|null $label
      * @param $text
      */
-    public function __construct($label = NULL, $text)
+    public function __construct(string $label = NULL, $text)
     {
         parent::__construct($label);
 

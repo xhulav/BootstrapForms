@@ -103,7 +103,7 @@ trait TTextBasedInput
      * Generates control's HTML element.
      * @return Html
      */
-    public function getControl()
+    public function getControl(): Html
     {
         if ($this->hasGroupAddon()) {
             $groupAddon = Html::el('div');
